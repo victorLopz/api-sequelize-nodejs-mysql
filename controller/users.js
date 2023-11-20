@@ -3,12 +3,12 @@ const User = db.User
 const Notas = db.Notas
 
 exports.viewAllUser = async (req, res) => {
-    const resultado = await Users.findAll();
+    const resultado = await User.findAll();
     res.json(resultado);
 }
 
 exports.viewUser = async (req, res) => {
-    const resultado = await Users.findByPk(
+    const resultado = await User.findByPk(
         req.params.id
     );
     res.json(resultado);
@@ -16,7 +16,7 @@ exports.viewUser = async (req, res) => {
 
 exports.insertUser = async (req, res) => {
     const { firstName, lastName, age } = req.body;
-    const usuarioNuevo = await Users.create({ firstName, lastName, age }); 
+    const usuarioNuevo = await User.create({ firstName, lastName, age }); 
     res.json(usuarioNuevo);
 }
 

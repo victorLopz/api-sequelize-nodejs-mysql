@@ -8,9 +8,9 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      id_user: {
+      userId: {
         type: Sequelize.INTEGER,
-        field: "id_user",
+        field: "user_id",
         allowNull: false,
         references: {
           model: "Users",
@@ -18,9 +18,9 @@ module.exports = {
           key: "id",
         },
       },
-      id_materia: {
+      materiaId: {
         type: Sequelize.INTEGER,
-        field: "id_materia",
+        field: "materia_id",
         allowNull: false,
         references: {
           model: "Materias",

@@ -1,13 +1,13 @@
 const db = require('../models/index');
-const Materias = db.Materias;
+const Materia = db.Materia;
 
 exports.viewAllMaterias = async ( req, res) => {
-    const resultado = await Materias.findAll();
+    const resultado = await Materia.findAll();
     res.json(resultado);
 }
 
 exports.viewMaterias = async (req, res) => {
-    const resultado = await Materias.findByPk(
+    const resultado = await Materia.findByPk(
         req.params.id
     );
     res.json(resultado);
@@ -15,6 +15,6 @@ exports.viewMaterias = async (req, res) => {
 
 exports.insertMaterias = async (req, res) => {
     const { name, comment } = req.body;
-    const materiaNueva = await Materias.create({ name, comment }); 
+    const materiaNueva = await Materia.create({ name, comment }); 
     res.json(materiaNueva);
 }

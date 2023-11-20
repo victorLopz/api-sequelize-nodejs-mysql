@@ -9,13 +9,16 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       firstName: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        field: 'first_name'
       },
       lastName: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        field: 'last_name'
       },
       age: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        defaultValue: 0
       },
       createdAt: {
         allowNull: false,
